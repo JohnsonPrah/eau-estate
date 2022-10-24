@@ -19,7 +19,7 @@ const PropertyDetails = ({propertyDetails:{ price,rentFrequency,rooms,title,bath
                     <div className='font-bold text-lg text-gray-800' >AED {price}{rentFrequency && `/${rentFrequency}`}</div>
                 </div>
                 <div>
-                <Image  width='70' height='32' src={agency?.logo?.url} />
+                <Image  width='70' height='32' src={agency?.logo?.url} alt="hi"/>
                 </div>
             </div>
     

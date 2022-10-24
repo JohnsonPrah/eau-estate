@@ -19,12 +19,12 @@ function Navbar() {
                       md:flex-row 
                       '>
         <Link href='/'  >
-            <Image src={log} width='200' height='100' className=' cursor-pointer pl-2' />
+            <Image src={log} width='200' alt='ben' height='100' className=' cursor-pointer pl-2' />
         </Link>
         <div className=' text-blue-900 cursor-pointer font-bold'>
-           <Link href='/search'>  Search </Link> |
-            <Link href='/search?purpose=for-sale'>Buy A Home </Link> |
-            <Link href='/search?purpose=for-rent'>Rent Apartment </Link>
+           <Link href='/Search'>  Search </Link> |
+            <Link href='/Search?purpose=for-sale'>Buy A Home </Link> |
+            <Link href='/Search?purpose=for-rent'>Rent Apartment </Link>
         </div>
 
       </div>

@@ -42,7 +42,7 @@ function ImageScrollbar({data}) {
   return (
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} style={{overflow:'hidden'}}>
         {data.map(item=>(
-            <div className='w-910 hidden p-1'  itemID={item.id}>
+            <div className='w-910 hidden p-1' key={item.id} itemID={item.id}>
                 <Image 
                    placeholder='blur'
                    blurDataURL={item.url}

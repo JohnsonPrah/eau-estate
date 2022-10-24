@@ -12,7 +12,7 @@ function property({ property: { coverPhoto, price, rentFrequency, rooms, title, 
     <Link href={`/property/${externalID}`} passHref>
       <div className='w-fit m-1  rounded-sm pt-0 bg-gray-100 justify-start cursor-pointer flex-wrap ' >
         <div className=''>
-          <Image src={coverPhoto ? coverPhoto.url : DefaultImage} width='400' height='260'/>
+          <Image alt='pen' src={coverPhoto ? coverPhoto.url : DefaultImage} width='400' height='260'/>
         </div>
         <div className ='w-full p-1'>
           <div className='pt-1 flex items-center justify-between mb-1'>
@@ -21,7 +21,7 @@ function property({ property: { coverPhoto, price, rentFrequency, rooms, title, 
               <div className='font-bold text-lg text-gray-800' >AED {millify(price)}{rentFrequency && `/${rentFrequency}`}</div>
             </div>
             <div>
-              <Image  width='70' height='32' src={agency?.logo?.url} />
+              <Image alt='pedn'  width='70' height='32' src={agency?.logo?.url} />
             </div>
           </div>
           <div className='items-center flex p-3 justify-between w-250 text-blue-700' >
