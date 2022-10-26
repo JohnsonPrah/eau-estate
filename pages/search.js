@@ -12,7 +12,7 @@ function Search({properties}) {
 
 
   return (
-    <div className=' '>
+    <section className=' '>
         {<SearchFilters />}
             <h1 className=' font-4xl ml-12 text-10 p-4 font-bold'>
                 Properties {router.query.purpose}
@@ -25,7 +25,7 @@ function Search({properties}) {
                 <h1 className='text-4xl mt-3 font-black'>NO RESULT FOUND</h1>
             </div> )}
 
-    </div>
+    </section>
   )
 }
 
