@@ -8,11 +8,11 @@ import Property from '../components/Property'
 
 export default function Home({propertiesForSale,propertiesForRent}) {
   return (
-    <div className=''>
+    <div className='w-full '>
       
       
       <h1 className='flex justify-center mt-5 font-bold my-2
-                     items-center text-xl text-blue-900'>
+                     items-center text-xl text-blue-900 text-center'>
          Tour our Properties/Homes-For-Sale !!!
       </h1>
       
@@ -21,14 +21,14 @@ export default function Home({propertiesForSale,propertiesForRent}) {
         Looking to Sell,Lease or Own a property in Dubai? Look no further,
         List with Windermere & find <br /> a tenant or buyer  in a jiffy!
       </p>
-      <div className='px-1 mx-14 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex'>
+      <div className='px-1 mx-2 gap-2 md:mx-5 lg:mx-14 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex place-items-center'>
            {propertiesForSale.map(property => <Property property={property} key={property.id}/>)}
       </div>
 
       
 
       <h1 className='flex justify-center mt-20 mb-5 font-bold
-                     items-center text-xl text-blue-900' >
+                     items-center text-xl text-blue-900 text-center' >
         Tour our Apartments-for-Rent !!!
       </h1>
 
@@ -41,7 +41,7 @@ export default function Home({propertiesForSale,propertiesForRent}) {
           
       </p>
 
-      <div className='px-1 mx-14 sm:grid md:grid-cols-2 md:py-1 xl:grid-cols-3 3xl:flex'>
+      <div className='px-1 mx-2 gap-2 md:mx-5 lg:mx-14 sm:grid md:grid-cols-2 md:py-1 xl:grid-cols-3 3xl:flex place-items-center'>
       {propertiesForRent.map(property => <Property property={property} key={property.id}/>)}
 
       </div>

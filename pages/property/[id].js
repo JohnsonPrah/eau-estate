@@ -3,15 +3,33 @@ import ImageScrollbar from '../../components/ImageScrollbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBed,faCircleCheck,faBath,faMaximize} from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image';
+{/* import "../../components/slick.css"; 
+import "../../components/slick-theme.css" */}
+import Slider from 'react-slick';
+     
+
+
 
 const PropertyDetails = ({propertyDetails:{ price,rentFrequency,rooms,title,baths,area,agency,isVerified,description,type
                            ,purpose,furnishingStatus,amenities,photos}}) => 
-                           
-                           
-                           
+                                      
                            (
-    <div className='max-w-1000 m-auto p-4'>
-        { photos  &&  <ImageScrollbar data={ photos } />}
+    <div className='max-w-1000 m-auto' >
+
+         
+                <div className='grid px-2 gap-2 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+                     {
+                        photos && photos.slice(0,4).map((foto) => (<Image src={foto.url} key={foto.id} className="objext-cover rounded-sm" width={300} height={300} /> ))
+                     }
+                </div>
+            
+
+
+
+
+
+
+
         <div className='w-400 p-6 '>
             <div className='pt-1 flex items-center justify-beteen mb-1'>
                 <div className='items-center flex mr-7'>
@@ -41,10 +59,12 @@ const PropertyDetails = ({propertyDetails:{ price,rentFrequency,rooms,title,bath
                     <p className='mr-2 mb-1' >type -</p>
                     <h1 className="font-bold">{type}</h1>
                 </div>
+              
                 <div className="flex ">
                     <p className='mr-2 mb-1'>purpose -</p>
                     <h1 className="font-bold">{purpose}</h1>
                 </div>
+
                 {furnishingStatus && (
                     <div className="flex">
                     <p className='mr-3' >furnishing Status</p>

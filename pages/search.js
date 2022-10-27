@@ -17,7 +17,7 @@ function Search({properties}) {
             <h1 className=' font-4xl ml-12 text-10 p-4 font-bold'>
                 Properties {router.query.purpose}
             </h1>
-            <div className='flex flex-wrap mx-14'>
+            <div className=' px-1 mx-2 gap-2 md:mx-5 lg:mx-14 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex place-items-center'>
                 {properties.map(property=>< Property property={property} key={property.id}/>)}
             </div>
             {properties.length === 0 && ( <div className='flex justify-center flex-col items-center mt-5 mb-5'>

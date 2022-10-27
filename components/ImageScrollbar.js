@@ -41,7 +41,8 @@ function ImageScrollbar({data}) {
 
   return (
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} style={{overflow:'hidden'}}>
-        {data.map(item=>(
+ 
+        {data && data.map((item) => (
             <div className='w-910 hidden p-1' key={item.id} itemID={item.id}>
                 <Image 
                    placeholder='blur'
@@ -54,8 +55,8 @@ function ImageScrollbar({data}) {
                 />
             </div>
         ))}
-    </ScrollMenu>
+   </ScrollMenu>
   )
 }
 
-export default ImageScrollbar
+export default ImageScrollbar;

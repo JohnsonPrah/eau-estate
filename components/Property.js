@@ -10,7 +10,7 @@ import millify from 'millify'
 function property({ property: { coverPhoto, price, rentFrequency, rooms, title, baths, area, agency, isVerified, externalID  } }) {
   return (
     <Link href={`/property/${externalID}`} passHref>
-      <div className='w-fit m-1  rounded-sm pt-0 bg-gray-100 justify-start cursor-pointer flex-wrap ' >
+      <div className='sm:w-fit m-1 min-w-screen rounded-sm pt-0 bg-gray-100 justify-start cursor-pointer flex-wrap ' >
         <div className=''>
           <Image alt='pen' src={coverPhoto ? coverPhoto.url : DefaultImage} width='400' height='260'/>
         </div>
